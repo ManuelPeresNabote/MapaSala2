@@ -33,6 +33,10 @@ namespace MapaSala
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diasDaSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,10 +48,6 @@ namespace MapaSala
             this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salasLivresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosProfessoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.horáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.diasDaSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,88 +85,13 @@ namespace MapaSala
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrosToolStripMenuItem.Text = "Salas";
+            this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.relatoriosToolStripMenuItem.Text = "Professores";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
-            // arquivoToolStripMenuItem
-            // 
-            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvarToolStripMenuItem,
-            this.abrirToolStripMenuItem,
-            this.opçõesToolStripMenuItem,
-            this.imprimirToolStripMenuItem,
-            this.compartilharToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
-            // 
-            // salvarToolStripMenuItem
-            // 
-            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salvarToolStripMenuItem.Text = "Salvar";
-            // 
-            // abrirToolStripMenuItem
-            // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            // 
-            // opçõesToolStripMenuItem
-            // 
-            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.opçõesToolStripMenuItem.Text = "Opções";
-            // 
-            // imprimirToolStripMenuItem
-            // 
-            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.imprimirToolStripMenuItem.Text = "Imprimir";
-            // 
-            // compartilharToolStripMenuItem
-            // 
-            this.compartilharToolStripMenuItem.Name = "compartilharToolStripMenuItem";
-            this.compartilharToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.compartilharToolStripMenuItem.Text = "Compartilhar";
-            // 
-            // relatóriosToolStripMenuItem
-            // 
-            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.faltasToolStripMenuItem,
-            this.salasLivresToolStripMenuItem,
-            this.todosProfessoresToolStripMenuItem});
-            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.relatóriosToolStripMenuItem.Text = "Relatórios";
-            // 
-            // faltasToolStripMenuItem
-            // 
-            this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
-            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.faltasToolStripMenuItem.Text = "Faltas";
-            // 
-            // salasLivresToolStripMenuItem
-            // 
-            this.salasLivresToolStripMenuItem.Name = "salasLivresToolStripMenuItem";
-            this.salasLivresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salasLivresToolStripMenuItem.Text = "Salas livres";
-            // 
-            // todosProfessoresToolStripMenuItem
-            // 
-            this.todosProfessoresToolStripMenuItem.Name = "todosProfessoresToolStripMenuItem";
-            this.todosProfessoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.todosProfessoresToolStripMenuItem.Text = "Todos Professores";
             // 
             // disciplinasToolStripMenuItem
             // 
@@ -191,6 +116,82 @@ namespace MapaSala
             this.diasDaSemanaToolStripMenuItem.Name = "diasDaSemanaToolStripMenuItem";
             this.diasDaSemanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diasDaSemanaToolStripMenuItem.Text = "Dias da Semana";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
+            // arquivoToolStripMenuItem
+            // 
+            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarToolStripMenuItem,
+            this.abrirToolStripMenuItem,
+            this.opçõesToolStripMenuItem,
+            this.imprimirToolStripMenuItem,
+            this.compartilharToolStripMenuItem});
+            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Text = "Arquivo";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar";
+            // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            // 
+            // opçõesToolStripMenuItem
+            // 
+            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.opçõesToolStripMenuItem.Text = "Opções";
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
+            // 
+            // compartilharToolStripMenuItem
+            // 
+            this.compartilharToolStripMenuItem.Name = "compartilharToolStripMenuItem";
+            this.compartilharToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.compartilharToolStripMenuItem.Text = "Compartilhar";
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.faltasToolStripMenuItem,
+            this.salasLivresToolStripMenuItem,
+            this.todosProfessoresToolStripMenuItem});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // faltasToolStripMenuItem
+            // 
+            this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
+            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.faltasToolStripMenuItem.Text = "Faltas";
+            // 
+            // salasLivresToolStripMenuItem
+            // 
+            this.salasLivresToolStripMenuItem.Name = "salasLivresToolStripMenuItem";
+            this.salasLivresToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.salasLivresToolStripMenuItem.Text = "Salas livres";
+            // 
+            // todosProfessoresToolStripMenuItem
+            // 
+            this.todosProfessoresToolStripMenuItem.Name = "todosProfessoresToolStripMenuItem";
+            this.todosProfessoresToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.todosProfessoresToolStripMenuItem.Text = "Todos Professores";
             // 
             // button1
             // 

@@ -165,6 +165,7 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "frmSalas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSalas";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
