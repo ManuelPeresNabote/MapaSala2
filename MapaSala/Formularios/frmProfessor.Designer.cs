@@ -37,6 +37,7 @@ namespace MapaSala.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.dtGridProfessor = new System.Windows.Forms.DataGridView();
             this.bttSalvar = new System.Windows.Forms.Button();
+            this.bttLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +100,7 @@ namespace MapaSala.Formularios
             // 
             // bttSalvar
             // 
-            this.bttSalvar.Location = new System.Drawing.Point(404, 25);
+            this.bttSalvar.Location = new System.Drawing.Point(386, 22);
             this.bttSalvar.Name = "bttSalvar";
             this.bttSalvar.Size = new System.Drawing.Size(75, 23);
             this.bttSalvar.TabIndex = 7;
@@ -107,11 +108,22 @@ namespace MapaSala.Formularios
             this.bttSalvar.UseVisualStyleBackColor = true;
             this.bttSalvar.Click += new System.EventHandler(this.bttSalvar_Click);
             // 
+            // bttLimpar
+            // 
+            this.bttLimpar.Location = new System.Drawing.Point(495, 21);
+            this.bttLimpar.Name = "bttLimpar";
+            this.bttLimpar.Size = new System.Drawing.Size(75, 23);
+            this.bttLimpar.TabIndex = 8;
+            this.bttLimpar.Text = "Limpar";
+            this.bttLimpar.UseVisualStyleBackColor = true;
+            this.bttLimpar.Click += new System.EventHandler(this.bttLimpar_Click);
+            // 
             // frmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttLimpar);
             this.Controls.Add(this.bttSalvar);
             this.Controls.Add(this.dtGridProfessor);
             this.Controls.Add(this.label3);
@@ -122,6 +134,7 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.label1);
             this.Name = "frmProfessor";
             this.Text = "frmProfessor";
+            this.Load += new System.EventHandler(this.frmProfessor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,5 +151,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dtGridProfessor;
         private System.Windows.Forms.Button bttSalvar;
+        private System.Windows.Forms.Button bttLimpar;
     }
 }

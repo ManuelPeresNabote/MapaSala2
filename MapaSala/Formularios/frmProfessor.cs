@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entitidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,22 @@ namespace MapaSala.Formularios
         }
 
         private void bttSalvar_Click(object sender, EventArgs e)
+        {
+            ProfessoresEntidade p = new ProfessoresEntidade();
+            p.Id = Convert.ToInt32(txtId.Text);
+            p.Nome = txtNome.Text;
+            p.Apelido = txtApelido.Text;
+            dados.Add(p);
+        }
+
+        private void bttLimpar_Click(object sender, EventArgs e)
+        {
+            txtApelido.Text = "";
+            txtNome.Text = "";
+            txtId.Text = "";
+        }
+
+        private void frmProfessor_Load(object sender, EventArgs e)
         {
 
         }

@@ -28,5 +28,16 @@ namespace MapaSala
             frmSalas s = new frmSalas();
             s.ShowDialog();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void relatoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfessor s = new frmProfessor();
+            s.ShowDialog();
+        }
     }
 }
