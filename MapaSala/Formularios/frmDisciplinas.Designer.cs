@@ -122,10 +122,11 @@ namespace MapaSala.Formularios
             // 
             // dtGriddisciplinas
             // 
+            this.dtGriddisciplinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGriddisciplinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGriddisciplinas.Location = new System.Drawing.Point(107, 96);
+            this.dtGriddisciplinas.Location = new System.Drawing.Point(12, 98);
             this.dtGriddisciplinas.Name = "dtGriddisciplinas";
-            this.dtGriddisciplinas.Size = new System.Drawing.Size(560, 316);
+            this.dtGriddisciplinas.Size = new System.Drawing.Size(776, 340);
             this.dtGriddisciplinas.TabIndex = 9;
             // 
             // frmDisciplinas

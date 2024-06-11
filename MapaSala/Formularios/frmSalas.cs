@@ -38,5 +38,21 @@ namespace MapaSala.Formularios
         {
 
         }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bttLimpar_Click(object sender, EventArgs e)
+        {
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtNumPc.Value = 0;
+            txtNumCadeira.Value = 0;
+            chkIsLab.Checked = false;
+            chkDisponivel.Checked = false;
+
+        }
     }
 }

@@ -45,5 +45,11 @@ namespace MapaSala
             frmDisciplinas s = new frmDisciplinas();
             s.ShowDialog();
         }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCursos s = new frmCursos();
+            s.ShowDialog();
+        }
     }
 }
