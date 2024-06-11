@@ -138,6 +138,7 @@ namespace MapaSala.Formularios
             this.bttExcluir.TabIndex = 10;
             this.bttExcluir.Text = "Excluir";
             this.bttExcluir.UseVisualStyleBackColor = true;
+            this.bttExcluir.Click += new System.EventHandler(this.bttExcluir_Click);
             // 
             // frmDisciplinas
             // 
