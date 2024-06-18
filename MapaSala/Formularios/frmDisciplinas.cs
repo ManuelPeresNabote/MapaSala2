@@ -19,6 +19,16 @@ namespace MapaSala.Formularios
         {
             InitializeComponent();
             dados = new DataTable();
+
+            foreach (var atributos in typeof(DisciplinasEntidade).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+
+            dados.Rows.Add(1, "Matematica", "MAT", true);
+            dados.Rows.Add(2, "Português", "PORT", true);
+            dados.Rows.Add(3, "Física", "FIS", false);
+
             dtGriddisciplinas.DataSource = dados;
         }
 
@@ -29,11 +39,17 @@ namespace MapaSala.Formularios
             d.Nome = txtNome.Text;
             d.Sigla = txtSigla.Text;
             d.Ativo = chkAtivo.Checked;
-            dados.Add(d);
+
+            dados.Rows.Add(d.Linha());
+
 
         }
 
         private void bttLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+        private void LimparCampos()
         {
             txtId.Text = "";
             txtNome.Text = "";
@@ -49,6 +65,22 @@ namespace MapaSala.Formularios
         private void bttExcluir_Click(object sender, EventArgs e)
         {
             dtGriddisciplinas.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void dtGriddisciplinas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtSigla.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            txtId.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[3].Value.ToString();
+        }
+
+        private void bttEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow minhamae = dtGriddisciplinas.Rows[LinhaSelecionada];
+            minhamae.Cells[0].Value = txtId.Text;
+            minhamae.Cells[1].Value = txtNome.Text;
+            minhamae.Cells[2].Value = txtSigla.Text;
         }
     }
 }
