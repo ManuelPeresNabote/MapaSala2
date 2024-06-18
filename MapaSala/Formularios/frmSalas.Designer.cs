@@ -42,6 +42,8 @@ namespace MapaSala.Formularios
             this.txtNumCadeira = new System.Windows.Forms.NumericUpDown();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
             this.bttLimpar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumPc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumCadeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
@@ -49,7 +51,7 @@ namespace MapaSala.Formularios
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(52, 30);
+            this.txtNome.Location = new System.Drawing.Point(36, 29);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(72, 20);
             this.txtNome.TabIndex = 0;
@@ -58,7 +60,7 @@ namespace MapaSala.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 14);
+            this.label1.Location = new System.Drawing.Point(36, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 3;
@@ -67,20 +69,20 @@ namespace MapaSala.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 14);
+            this.label2.Location = new System.Drawing.Point(114, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Número de computadores";
+            this.label2.Text = "Num comp";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(265, 14);
+            this.label3.Location = new System.Drawing.Point(178, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Número de Cadeiras";
+            this.label3.Text = "Num Cadeiras";
             // 
             // label4
             // 
@@ -95,13 +97,13 @@ namespace MapaSala.Formularios
             // 
             this.txtId.Location = new System.Drawing.Point(2, 30);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(44, 20);
+            this.txtId.Size = new System.Drawing.Size(28, 20);
             this.txtId.TabIndex = 7;
             // 
             // chkIsLab
             // 
             this.chkIsLab.AutoSize = true;
-            this.chkIsLab.Location = new System.Drawing.Point(366, 33);
+            this.chkIsLab.Location = new System.Drawing.Point(221, 30);
             this.chkIsLab.Name = "chkIsLab";
             this.chkIsLab.Size = new System.Drawing.Size(85, 17);
             this.chkIsLab.TabIndex = 8;
@@ -111,7 +113,7 @@ namespace MapaSala.Formularios
             // chkDisponivel
             // 
             this.chkDisponivel.AutoSize = true;
-            this.chkDisponivel.Location = new System.Drawing.Point(457, 31);
+            this.chkDisponivel.Location = new System.Drawing.Point(301, 30);
             this.chkDisponivel.Name = "chkDisponivel";
             this.chkDisponivel.Size = new System.Drawing.Size(77, 17);
             this.chkDisponivel.TabIndex = 9;
@@ -120,7 +122,7 @@ namespace MapaSala.Formularios
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(540, 29);
+            this.button1.Location = new System.Drawing.Point(384, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -130,16 +132,16 @@ namespace MapaSala.Formularios
             // 
             // txtNumPc
             // 
-            this.txtNumPc.Location = new System.Drawing.Point(140, 30);
+            this.txtNumPc.Location = new System.Drawing.Point(114, 29);
             this.txtNumPc.Name = "txtNumPc";
-            this.txtNumPc.Size = new System.Drawing.Size(81, 20);
+            this.txtNumPc.Size = new System.Drawing.Size(41, 20);
             this.txtNumPc.TabIndex = 11;
             // 
             // txtNumCadeira
             // 
-            this.txtNumCadeira.Location = new System.Drawing.Point(268, 30);
+            this.txtNumCadeira.Location = new System.Drawing.Point(178, 28);
             this.txtNumCadeira.Name = "txtNumCadeira";
-            this.txtNumCadeira.Size = new System.Drawing.Size(82, 20);
+            this.txtNumCadeira.Size = new System.Drawing.Size(37, 20);
             this.txtNumCadeira.TabIndex = 12;
             // 
             // dtGridSalas
@@ -153,7 +155,7 @@ namespace MapaSala.Formularios
             // 
             // bttLimpar
             // 
-            this.bttLimpar.Location = new System.Drawing.Point(621, 29);
+            this.bttLimpar.Location = new System.Drawing.Point(465, 27);
             this.bttLimpar.Name = "bttLimpar";
             this.bttLimpar.Size = new System.Drawing.Size(75, 23);
             this.bttLimpar.TabIndex = 14;
@@ -161,11 +163,31 @@ namespace MapaSala.Formularios
             this.bttLimpar.UseVisualStyleBackColor = true;
             this.bttLimpar.Click += new System.EventHandler(this.bttLimpar_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(546, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(627, 26);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.bttLimpar);
             this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.txtNumCadeira);
@@ -206,5 +228,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.NumericUpDown txtNumCadeira;
         private System.Windows.Forms.DataGridView dtGridSalas;
         private System.Windows.Forms.Button bttLimpar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
