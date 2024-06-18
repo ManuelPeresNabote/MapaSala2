@@ -43,7 +43,7 @@ private void label2_Click(object sender, EventArgs e)
             p.Id = Convert.ToInt32(txtId.Text);
             p.Nome = txtNome.Text;
             p.Apelido = txtApelido.Text;
-            dados.Rows.Add(p);
+            dados.Rows.Add(p.Linha());
         }
 
         private void bttLimpar_Click(object sender, EventArgs e)

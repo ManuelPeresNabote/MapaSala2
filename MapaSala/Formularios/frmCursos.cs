@@ -44,7 +44,7 @@ namespace MapaSala.Formularios
             c.Turno = txtTurno.Text;
             c.Ativo = chkAtivo.Checked;
 
-            dados.Rows.Add(c);
+            dados.Rows.Add(c.Linha());
         }
 
         private void bttLimpar_Click(object sender, EventArgs e)
@@ -81,6 +81,11 @@ namespace MapaSala.Formularios
             minhamae.Cells[1].Value = txtNome.Text;
             minhamae.Cells[2].Value = txtTurno.Text;
             minhamae.Cells[3].Value = chkAtivo.Checked;
+        }
+
+        private void frmCursos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

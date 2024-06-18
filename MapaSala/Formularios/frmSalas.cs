@@ -42,7 +42,7 @@ namespace MapaSala.Formularios
             salas.NumeroComputadores = Convert.ToInt32(numPc.Value);
             salas.Disponivel = chkDisponivel.Checked;
 
-            dados.Rows.Add(salas);
+            dados.Rows.Add(salas.Linha());
         }
 
         private void frmSalas_Load(object sender, EventArgs e)
