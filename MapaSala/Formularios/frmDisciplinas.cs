@@ -72,7 +72,7 @@ namespace MapaSala.Formularios
             LinhaSelecionada = e.RowIndex;
             txtNome.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
             txtSigla.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            txtId.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[3].Value.ToString();
+            txtId.Text = dtGriddisciplinas.Rows[LinhaSelecionada].Cells[0].Value.ToString();
         }
 
         private void bttEditar_Click(object sender, EventArgs e)

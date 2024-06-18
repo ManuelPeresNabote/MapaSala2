@@ -13,11 +13,21 @@ namespace MapaSala.Formularios
 {
     public partial class frmCursos : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmCursos()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+
+            foreach (var atributos in typeof(CursoEntidade).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+
+            dados.Rows.Add(1, "Desenvolvimento de Sistemas", "Manhã", true);
+            dados.Rows.Add(2, "Administração", "Manhã", true);
+            dados.Rows.Add(3, "Serviços Jurísdicos", "Noite", false);
             dtGridcursos.DataSource = dados;
         }
 
@@ -34,10 +44,14 @@ namespace MapaSala.Formularios
             c.Turno = txtTurno.Text;
             c.Ativo = chkAtivo.Checked;
 
-            dados.Add(c);
+            dados.Rows.Add(c);
         }
 
         private void bttLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+        private void LimparCampos()
         {
             txtNome.Text = "";
             txtId.Text = "";
@@ -45,9 +59,28 @@ namespace MapaSala.Formularios
             chkAtivo.Checked = false;
         }
 
+
         private void bttExcluir_Click(object sender, EventArgs e)
         {
-            
+            dtGridcursos.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void dtGridcursos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGridcursos.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtTurno.Text = dtGridcursos.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            txtId.Text = dtGridcursos.Rows[LinhaSelecionada].Cells[0].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(dtGridcursos.Rows[LinhaSelecionada].Cells[3].Value);
+        }
+
+        private void bttEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow minhamae = dtGridcursos.Rows[LinhaSelecionada];
+            minhamae.Cells[0].Value = txtId.Text;
+            minhamae.Cells[1].Value = txtNome.Text;
+            minhamae.Cells[2].Value = txtTurno.Text;
+            minhamae.Cells[3].Value = chkAtivo.Checked;
         }
     }
 }

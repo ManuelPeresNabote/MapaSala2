@@ -38,14 +38,14 @@ namespace MapaSala.Formularios
             this.chkIsLab = new System.Windows.Forms.CheckBox();
             this.chkDisponivel = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtNumPc = new System.Windows.Forms.NumericUpDown();
-            this.txtNumCadeira = new System.Windows.Forms.NumericUpDown();
+            this.numPc = new System.Windows.Forms.NumericUpDown();
+            this.numCadeira = new System.Windows.Forms.NumericUpDown();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
             this.bttLimpar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumCadeira)).BeginInit();
+            this.bttExcluir = new System.Windows.Forms.Button();
+            this.bttEditar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numPc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCadeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,19 +130,19 @@ namespace MapaSala.Formularios
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtNumPc
+            // numPc
             // 
-            this.txtNumPc.Location = new System.Drawing.Point(114, 29);
-            this.txtNumPc.Name = "txtNumPc";
-            this.txtNumPc.Size = new System.Drawing.Size(41, 20);
-            this.txtNumPc.TabIndex = 11;
+            this.numPc.Location = new System.Drawing.Point(114, 29);
+            this.numPc.Name = "numPc";
+            this.numPc.Size = new System.Drawing.Size(41, 20);
+            this.numPc.TabIndex = 11;
             // 
-            // txtNumCadeira
+            // numCadeira
             // 
-            this.txtNumCadeira.Location = new System.Drawing.Point(178, 28);
-            this.txtNumCadeira.Name = "txtNumCadeira";
-            this.txtNumCadeira.Size = new System.Drawing.Size(37, 20);
-            this.txtNumCadeira.TabIndex = 12;
+            this.numCadeira.Location = new System.Drawing.Point(178, 28);
+            this.numCadeira.Name = "numCadeira";
+            this.numCadeira.Size = new System.Drawing.Size(37, 20);
+            this.numCadeira.TabIndex = 12;
             // 
             // dtGridSalas
             // 
@@ -152,6 +152,7 @@ namespace MapaSala.Formularios
             this.dtGridSalas.Name = "dtGridSalas";
             this.dtGridSalas.Size = new System.Drawing.Size(673, 352);
             this.dtGridSalas.TabIndex = 13;
+            this.dtGridSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellClick);
             // 
             // bttLimpar
             // 
@@ -163,35 +164,37 @@ namespace MapaSala.Formularios
             this.bttLimpar.UseVisualStyleBackColor = true;
             this.bttLimpar.Click += new System.EventHandler(this.bttLimpar_Click);
             // 
-            // button2
+            // bttExcluir
             // 
-            this.button2.Location = new System.Drawing.Point(546, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bttExcluir.Location = new System.Drawing.Point(546, 27);
+            this.bttExcluir.Name = "bttExcluir";
+            this.bttExcluir.Size = new System.Drawing.Size(75, 23);
+            this.bttExcluir.TabIndex = 15;
+            this.bttExcluir.Text = "Excluir";
+            this.bttExcluir.UseVisualStyleBackColor = true;
+            this.bttExcluir.Click += new System.EventHandler(this.bttExcluir_Click);
             // 
-            // button3
+            // bttEditar
             // 
-            this.button3.Location = new System.Drawing.Point(627, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bttEditar.Location = new System.Drawing.Point(627, 26);
+            this.bttEditar.Name = "bttEditar";
+            this.bttEditar.Size = new System.Drawing.Size(63, 23);
+            this.bttEditar.TabIndex = 16;
+            this.bttEditar.Text = "Editar";
+            this.bttEditar.UseVisualStyleBackColor = true;
+            this.bttEditar.Click += new System.EventHandler(this.bttEditar_Click);
             // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bttEditar);
+            this.Controls.Add(this.bttExcluir);
             this.Controls.Add(this.bttLimpar);
             this.Controls.Add(this.dtGridSalas);
-            this.Controls.Add(this.txtNumCadeira);
-            this.Controls.Add(this.txtNumPc);
+            this.Controls.Add(this.numCadeira);
+            this.Controls.Add(this.numPc);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chkDisponivel);
             this.Controls.Add(this.chkIsLab);
@@ -205,8 +208,8 @@ namespace MapaSala.Formularios
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSalas";
             this.Load += new System.EventHandler(this.frmSalas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumCadeira)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCadeira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,11 +227,11 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.CheckBox chkIsLab;
         private System.Windows.Forms.CheckBox chkDisponivel;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown txtNumPc;
-        private System.Windows.Forms.NumericUpDown txtNumCadeira;
+        private System.Windows.Forms.NumericUpDown numPc;
+        private System.Windows.Forms.NumericUpDown numCadeira;
         private System.Windows.Forms.DataGridView dtGridSalas;
         private System.Windows.Forms.Button bttLimpar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bttExcluir;
+        private System.Windows.Forms.Button bttEditar;
     }
 }

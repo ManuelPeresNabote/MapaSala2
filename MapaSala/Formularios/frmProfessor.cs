@@ -68,7 +68,7 @@ private void label2_Click(object sender, EventArgs e)
             LinhaSelecionada = e.RowIndex;
             txtNome.Text = dtGridProfessor.Rows[LinhaSelecionada].Cells[1].Value.ToString();
             txtApelido.Text = dtGridProfessor.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            txtId.Text = dtGridProfessor.Rows[LinhaSelecionada].Cells[3].Value.ToString();
+            txtId.Text = dtGridProfessor.Rows[LinhaSelecionada].Cells[0].Value.ToString();
         }
 
         private void bttExcluir_Click(object sender, EventArgs e)
